@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="plc" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/plc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/plc" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="2" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="`pkg-config libmodbus --cflags`" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config libmodbus --libs`" />
+			<Add library="boost_system" />
+			<Add library="boost_serialization" />
+			<Add library="pthread" />
+		</Linker>
+		<Unit filename="include/command/AddCommand.h" />
+		<Unit filename="include/command/AddpCommand.h" />
+		<Unit filename="include/command/AnbCommand.h" />
+		<Unit filename="include/command/AndCommand.h" />
+		<Unit filename="include/command/AnddCommand.h" />
+		<Unit filename="include/command/AndeCommand.h" />
+		<Unit filename="include/command/AndfCommand.h" />
+		<Unit filename="include/command/AndgCommand.h" />
+		<Unit filename="include/command/AndgeCommand.h" />
+		<Unit filename="include/command/AndlCommand.h" />
+		<Unit filename="include/command/AndleCommand.h" />
+		<Unit filename="include/command/AndneCommand.h" />
+		<Unit filename="include/command/AndpCommand.h" />
+		<Unit filename="include/command/AniCommand.h" />
+		<Unit filename="include/command/Command.h" />
+		<Unit filename="include/command/CommandExecutionContext.h" />
+		<Unit filename="include/command/DecCommand.h" />
+		<Unit filename="include/command/DecpCommand.h" />
+		<Unit filename="include/command/DivCommand.h" />
+		<Unit filename="include/command/DivpCommand.h" />
+		<Unit filename="include/command/EgfCommand.h" />
+		<Unit filename="include/command/EgpCommand.h" />
+		<Unit filename="include/command/FfCommand.h" />
+		<Unit filename="include/command/IncCommand.h" />
+		<Unit filename="include/command/IncpCommand.h" />
+		<Unit filename="include/command/InvCommand.h" />
+		<Unit filename="include/command/LdCommand.h" />
+		<Unit filename="include/command/LdeCommand.h" />
+		<Unit filename="include/command/LdfCommand.h" />
+		<Unit filename="include/command/LdgCommand.h" />
+		<Unit filename="include/command/LdgeCommand.h" />
+		<Unit filename="include/command/LdiCommand.h" />
+		<Unit filename="include/command/LdlCommand.h" />
+		<Unit filename="include/command/LdleCommand.h" />
+		<Unit filename="include/command/LdneCommand.h" />
+		<Unit filename="include/command/LdpCommand.h" />
+		<Unit filename="include/command/MefCommand.h" />
+		<Unit filename="include/command/MepCommand.h" />
+		<Unit filename="include/command/MovCommand.h" />
+		<Unit filename="include/command/MovpCommand.h" />
+		<Unit filename="include/command/MppCommand.h" />
+		<Unit filename="include/command/MpsCommand.h" />
+		<Unit filename="include/command/MrdCommand.h" />
+		<Unit filename="include/command/MulCommand.h" />
+		<Unit filename="include/command/MulpCommand.h" />
+		<Unit filename="include/command/OrCommand.h" />
+		<Unit filename="include/command/OrbCommand.h" />
+		<Unit filename="include/command/OrdCommand.h" />
+		<Unit filename="include/command/OreCommand.h" />
+		<Unit filename="include/command/OrfCommand.h" />
+		<Unit filename="include/command/OrgCommand.h" />
+		<Unit filename="include/command/OrgeCommand.h" />
+		<Unit filename="include/command/OriCommand.h" />
+		<Unit filename="include/command/OrlCommand.h" />
+		<Unit filename="include/command/OrleCommand.h" />
+		<Unit filename="include/command/OrneCommand.h" />
+		<Unit filename="include/command/OrpCommand.h" />
+		<Unit filename="include/command/OutCommand.h" />
+		<Unit filename="include/command/OuttimerCommand.h" />
+		<Unit filename="include/command/PlfCommand.h" />
+		<Unit filename="include/command/PlsCommand.h" />
+		<Unit filename="include/command/RstCommand.h" />
+		<Unit filename="include/command/SetCommand.h" />
+		<Unit filename="include/command/SubCommand.h" />
+		<Unit filename="include/command/SubpCommand.h" />
+		<Unit filename="include/command/XordCommand.h" />
+		<Unit filename="include/common/Exceptions.h" />
+		<Unit filename="include/common/PlcServer.h" />
+		<Unit filename="include/common/PlcSession.h" />
+		<Unit filename="include/common/Program.h" />
+		<Unit filename="include/common/RaspPlc.h" />
+		<Unit filename="include/common/Types.h" />
+		<Unit filename="include/device/BitDevice.h" />
+		<Unit filename="include/device/ConstantDWord.h" />
+		<Unit filename="include/device/DWordDevice.h" />
+		<Unit filename="include/device/DataRegister.h" />
+		<Unit filename="include/device/Device.h" />
+		<Unit filename="include/device/Flag.h" />
+		<Unit filename="include/device/GroupedBitDevice.h" />
+		<Unit filename="include/device/Input.h" />
+		<Unit filename="include/device/Output.h" />
+		<Unit filename="include/device/SpecialDataRegister.h" />
+		<Unit filename="include/device/SpecialFlag.h" />
+		<Unit filename="include/device/Timer.h" />
+		<Unit filename="include/external/mcp23s17.h" />
+		<Unit filename="include/external/pifacedigital.h" />
+		<Unit filename="include/module/InputModule.h" />
+		<Unit filename="include/module/OutputModule.h" />
+		<Unit filename="include/module/PifaceModule.h" />
+		<Unit filename="include/parser/AwlParser.h" />
+		<Unit filename="include/parser/ConfigParser.h" />
+		<Unit filename="include/parser/StlParser.h" />
+		<Unit filename="src/command/AddCommand.cpp" />
+		<Unit filename="src/command/AddpCommand.cpp" />
+		<Unit filename="src/command/AnbCommand.cpp" />
+		<Unit filename="src/command/AndCommand.cpp" />
+		<Unit filename="src/command/AnddCommand.cpp" />
+		<Unit filename="src/command/AndeCommand.cpp" />
+		<Unit filename="src/command/AndfCommand.cpp" />
+		<Unit filename="src/command/AndgCommand.cpp" />
+		<Unit filename="src/command/AndgeCommand.cpp" />
+		<Unit filename="src/command/AndlCommand.cpp" />
+		<Unit filename="src/command/AndleCommand.cpp" />
+		<Unit filename="src/command/AndneCommand.cpp" />
+		<Unit filename="src/command/AndpCommand.cpp" />
+		<Unit filename="src/command/AniCommand.cpp" />
+		<Unit filename="src/command/Command.cpp" />
+		<Unit filename="src/command/CommandExecutionContext.cpp" />
+		<Unit filename="src/command/DecCommand.cpp" />
+		<Unit filename="src/command/DecpCommand.cpp" />
+		<Unit filename="src/command/DivCommand.cpp" />
+		<Unit filename="src/command/DivpCommand.cpp" />
+		<Unit filename="src/command/EgfCommand.cpp" />
+		<Unit filename="src/command/EgpCommand.cpp" />
+		<Unit filename="src/command/FfCommand.cpp" />
+		<Unit filename="src/command/IncCommand.cpp" />
+		<Unit filename="src/command/IncpCommand.cpp" />
+		<Unit filename="src/command/InvCommand.cpp" />
+		<Unit filename="src/command/LdCommand.cpp" />
+		<Unit filename="src/command/LdeCommand.cpp" />
+		<Unit filename="src/command/LdfCommand.cpp" />
+		<Unit filename="src/command/LdgCommand.cpp" />
+		<Unit filename="src/command/LdgeCommand.cpp" />
+		<Unit filename="src/command/LdiCommand.cpp" />
+		<Unit filename="src/command/LdlCommand.cpp" />
+		<Unit filename="src/command/LdleCommand.cpp" />
+		<Unit filename="src/command/LdneCommand.cpp" />
+		<Unit filename="src/command/LdpCommand.cpp" />
+		<Unit filename="src/command/MefCommand.cpp" />
+		<Unit filename="src/command/MepCommand.cpp" />
+		<Unit filename="src/command/MovCommand.cpp" />
+		<Unit filename="src/command/MovpCommand.cpp" />
+		<Unit filename="src/command/MppCommand.cpp" />
+		<Unit filename="src/command/MpsCommand.cpp" />
+		<Unit filename="src/command/MrdCommand.cpp" />
+		<Unit filename="src/command/MulCommand.cpp" />
+		<Unit filename="src/command/MulpCommand.cpp" />
+		<Unit filename="src/command/OrCommand.cpp" />
+		<Unit filename="src/command/OrbCommand.cpp" />
+		<Unit filename="src/command/OrdCommand.cpp" />
+		<Unit filename="src/command/OreCommand.cpp" />
+		<Unit filename="src/command/OrfCommand.cpp" />
+		<Unit filename="src/command/OrgCommand.cpp" />
+		<Unit filename="src/command/OrgeCommand.cpp" />
+		<Unit filename="src/command/OriCommand.cpp" />
+		<Unit filename="src/command/OrlCommand.cpp" />
+		<Unit filename="src/command/OrleCommand.cpp" />
+		<Unit filename="src/command/OrneCommand.cpp" />
+		<Unit filename="src/command/OrpCommand.cpp" />
+		<Unit filename="src/command/OutCommand.cpp" />
+		<Unit filename="src/command/OuttimerCommand.cpp" />
+		<Unit filename="src/command/PlfCommand.cpp" />
+		<Unit filename="src/command/PlsCommand.cpp" />
+		<Unit filename="src/command/RstCommand.cpp" />
+		<Unit filename="src/command/SetCommand.cpp" />
+		<Unit filename="src/command/SubCommand.cpp" />
+		<Unit filename="src/command/SubpCommand.cpp" />
+		<Unit filename="src/command/XordCommand.cpp" />
+		<Unit filename="src/common/Exceptions.cpp" />
+		<Unit filename="src/common/PlcServer.cpp" />
+		<Unit filename="src/common/PlcSession.cpp" />
+		<Unit filename="src/common/Program.cpp" />
+		<Unit filename="src/common/RaspPlc.cpp" />
+		<Unit filename="src/common/service.cpp" />
+		<Unit filename="src/device/BitDevice.cpp" />
+		<Unit filename="src/device/ConstantDWord.cpp" />
+		<Unit filename="src/device/DWordDevice.cpp" />
+		<Unit filename="src/device/DataRegister.cpp" />
+		<Unit filename="src/device/Device.cpp" />
+		<Unit filename="src/device/Flag.cpp" />
+		<Unit filename="src/device/GroupedBitDevice.cpp" />
+		<Unit filename="src/device/Input.cpp" />
+		<Unit filename="src/device/Output.cpp" />
+		<Unit filename="src/device/SpecialDataRegister.cpp" />
+		<Unit filename="src/device/SpecialFlag.cpp" />
+		<Unit filename="src/device/Timer.cpp" />
+		<Unit filename="src/external/mcp23s17.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/external/pifacedigital.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/module/InputModule.cpp" />
+		<Unit filename="src/module/OutputModule.cpp" />
+		<Unit filename="src/module/PifaceModule.cpp" />
+		<Unit filename="src/parser/ConfigParser.cpp" />
+		<Unit filename="src/parser/StlParser.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
