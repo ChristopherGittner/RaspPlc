@@ -5,6 +5,7 @@
 
 void LdiCommand::execute(CommandExecutionContext& context)
 {
+    context.RloStack.push_back(context.Rlo);
     context.Rlo = !(mDevice->getState());
 }
 

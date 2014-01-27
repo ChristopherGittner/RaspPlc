@@ -321,7 +321,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OrfCommand>(device));
         }
-        else if(token == "Or=")
+        else if(token == "or=")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
@@ -331,7 +331,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OreCommand>(deviceLeft, deviceRight));
         }
-        else if(token == "Or>")
+        else if(token == "or>")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
@@ -341,7 +341,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OrgCommand>(deviceLeft, deviceRight));
         }
-        else if(token == "Or>=")
+        else if(token == "or>=")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
@@ -351,7 +351,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OrgeCommand>(deviceLeft, deviceRight));
         }
-        else if(token == "Or<")
+        else if(token == "or<")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
@@ -361,7 +361,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OrlCommand>(deviceLeft, deviceRight));
         }
-        else if(token == "Or<=")
+        else if(token == "or<=")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
@@ -371,7 +371,7 @@ std::shared_ptr<Program> StlParser::parse(std::istream& is, const RaspPlc& plc)
 
             commands.push_back(std::make_shared<OrleCommand>(deviceLeft, deviceRight));
         }
-        else if(token == "Or<>")
+        else if(token == "or<>")
         {
             std::string deviceNameLeft, deviceNameRight;
             is >> deviceNameLeft >> deviceNameRight;
