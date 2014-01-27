@@ -12,11 +12,11 @@ LD = g++
 WINDRES = windres
 
 INC = -Iinclude
-CFLAGS = -std=c++11 -Wall `pkg-config libmodbus --cflags`
+CFLAGS = -std=c++11 -Wall
 RESINC = 
 LIBDIR = 
 LIB = -lboost_system -lboost_serialization -lpthread
-LDFLAGS = `pkg-config libmodbus --libs`
+LDFLAGS = 
 
 INC_DEBUG = $(INC)
 CFLAGS_DEBUG = $(CFLAGS) -g

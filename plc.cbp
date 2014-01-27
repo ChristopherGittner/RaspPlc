@@ -29,11 +29,9 @@
 		<Compiler>
 			<Add option="-std=c++11" />
 			<Add option="-Wall" />
-			<Add option="`pkg-config libmodbus --cflags`" />
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
-			<Add option="`pkg-config libmodbus --libs`" />
 			<Add library="boost_system" />
 			<Add library="boost_serialization" />
 			<Add library="pthread" />
